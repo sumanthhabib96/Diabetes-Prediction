@@ -41,10 +41,10 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)       
-    image=Image.open('C:/Users/Sumanth Habib/Desktop/Streamlit/what-is-data-science.jpg')
+    image=Image.open('what-is-data-science.jpg')
 
     st.image(image,caption='ML',use_column_width=True)
-    df=pd.read_csv('C:/Users/Sumanth Habib/Desktop/Streamlit/train.csv')
+    df=pd.read_csv('train.csv')
     df.drop(columns='p_id',axis=0,inplace=True)
     st.subheader('Data Information')
     st.dataframe(df)
